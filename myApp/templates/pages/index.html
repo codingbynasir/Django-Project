@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}Welcome to my django project{% endblock %}
+{% block content %}
+	<div class="content">
+		<div class="row">
+			<div class="col-md-12">
+				{% for hadith in all_hadiths %}
+			<div class="single-hadith">
+				<div class="row">
+					<div class="col-md-6">
+						<p class="text-justify translate">{{ hadith.translate }}</p>
+					</div>
+					<div class="col-md-6">
+						<p class="text-justify arabic">{{ hadith.body }}</p>
+					</div>
+				</div>
+			</div>
+		{% endfor %}
+			</div>
+		</div>
+	</div>
+{% endblock %}
